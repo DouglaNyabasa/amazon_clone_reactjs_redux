@@ -1,45 +1,49 @@
-import React from 'react';
-import {Swiper, SwiperSlide} from "swiper/react";
-import {Navigation,Autoplay} from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper";
+
 import "swiper/css";
 import "swiper/css/navigation";
 
+import carousel1 from "../../assets/images/carousel_1.jpg";
+import carousel2 from "../../assets/images/carousel_2.jpg";
+import carousel4 from "../../assets/images/carousel_4.jpg";
+import carousel5 from "../../assets/images/carousel_5.jpg";
+import carouselVid from "../../assets/images/carousel_vid.mp4";
 
 const Carousel = () => {
   return (
-    <div className='h-[600px] bg-white'>
-
-       <Swiper
+    <div className="h-[600px] bg-white">
+      <Swiper
         loop={true}
         spaceBetween={0}
         navigation={true}
-        module={[Navigation,Autoplay]}
+        modules={[Navigation, Autoplay]}
         autoplay={{
-            delay: 4500
+          delay: 4500,
         }}
         className="h-[50%]"
-       >
+      >
         <SwiperSlide>
-            <img src={"../../assets/images/carousel_1.jpg"}/>
-        </SwiperSlide>
-        <SwiperSlide>
-            <img src={"../../assets/images/carousel_2.jpg"}/>
+          <img src={carousel1} alt="Carousel 1" />
         </SwiperSlide>
         <SwiperSlide>
-            <video>
-                <source src="{../../../../assets/images/carousel_vid.mp4}"/>
-            </video>
+          <img src={carousel2} alt="Carousel 2" />
         </SwiperSlide>
-         <SwiperSlide>
-            <img src={"../../assets/images/carousel_4.jpg"}/>
+        <SwiperSlide className="bg-black">
+          <video controls muted>
+            <source src={carouselVid} type="video/mp4" />
+          </video>
         </SwiperSlide>
         <SwiperSlide>
-            <img src={"../../assets/images/carousel_5.jpg"}/>
+          <img src={carousel4} alt="Carousel 4" />
         </SwiperSlide>
-
-       </Swiper>
+        <SwiperSlide>
+          <img src={carousel5} alt="Carousel 5" />
+        </SwiperSlide>
+      </Swiper>
+      <div className="h-[50%] bg-gradient-to-b from-stone-900" />
     </div>
   );
-}
+};
 
 export default Carousel;
