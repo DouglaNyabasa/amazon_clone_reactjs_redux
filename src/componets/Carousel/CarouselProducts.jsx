@@ -14,64 +14,43 @@ import product7 from "../../assets/images/product_7_small.jpg";
 import product8 from "../../assets/images/product_8_small.jpg";
 import product9 from "../../assets/images/product_9_small.jpg";
 
+
 const CarouselProducts = () => {
+  const products = [
+    product0,
+    product1,
+    product2,
+    product3,
+    product4,
+    product5,
+    product6,
+    product7,
+    product8,
+        product9,
+
+    
+  ];
+
   return (
     <div className="bg-white m-3">
-        <div className="text-2xl font-semibold p-3">Best Sellers</div>
+      <div className="text-2xl font-semibold p-3">Best Sellers</div>
       <Swiper
         slidesPerView={7}
         spaceBetween={10}
         navigation={true}
         modules={[Navigation]}
       >
-        <SwiperSlide>
-          <Link  to={`/product`}>
-                    <img src={product0} alt="" />
-
-          </Link>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Link  to={`/product`}>
-                         <img src={product1} alt="" />
-
-          </Link>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Link  to={`/product`}>
-                        <img src={product2} alt="" />
-
-          </Link>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <img src={product3} alt="" />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <img src={product4} alt="" />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <img src={product5} alt="" />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <img src={product6} alt="" />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <img src={product7} alt="" />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <img src={product8} alt="" />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <img src={product9} alt="" />
-        </SwiperSlide>
+        {products.map((product, i) => (
+          <SwiperSlide key={i}>
+            <Link to={`/product/${i}`}>
+              <img
+                src={product}
+                alt={`Carousel product ${i}`}
+                loading="lazy" 
+              />
+            </Link>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
