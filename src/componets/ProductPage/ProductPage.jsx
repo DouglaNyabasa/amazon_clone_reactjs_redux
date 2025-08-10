@@ -17,7 +17,7 @@ const ProductPage = () => {
 
   useEffect(() => {
     getProduct();
-  }, []);
+  },[] );
 
   if (!product?.title) return <h1 className="">Loading Product...</h1>;
   return product && <div className="h-screen bg-amazonClone-background">
