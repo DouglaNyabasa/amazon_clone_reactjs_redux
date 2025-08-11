@@ -16,20 +16,20 @@ import product11 from "../../assets/images/product_11_small.jpg";
 import product12 from "../../assets/images/product_13_small.jpg";
 import product13 from "../../assets/images/product_12_small.jpg";
 import { ProductDetails } from "../Home";
-import { GB_CURRENCY } from '../Utils/Constants'
+import { GB_CURRENCY } from "../Utils/Constants";
 
 const images = {
   0: product0,
   1: product1,
-   2: product2,
+  2: product2,
   3: product3,
-   4: product4,
+  4: product4,
   5: product5,
-   6: product6,
+  6: product6,
   7: product7,
-   8: product8,
+  8: product8,
   9: product9,
-    10: product10,
+  10: product10,
   11: product11,
   12: product12,
   13: product13,
@@ -68,12 +68,18 @@ const SearchResults = () => {
             <Link key={key} to={`/product/${product.id}`}>
               <div className="h-[250px]  grid grid-cols-12 rounded mt-1 mb-1">
                 <div className="col-span-2 p-4 bg-gray-200">
-                   <img className="w-auto" src={images[product.id]} alt={product.title} />
+                  <img
+                    className="w-auto"
+                    src={images[product.id]}
+                    alt={product.title}
+                  />
                 </div>
                 <div className="col-span-10 bg-gray-50 border hover:bg-gray-100 border-gray-100 ">
                   <div className="font-medium text-black p-2">
-                    <ProductDetails product={product} ratings={true}/>
-                    <div className="text-xl xl:text-2xl pt-1">{GB_CURRENCY.format(product.price)}</div>
+                    <ProductDetails product={product} ratings={true} />
+                    <div className="text-xl xl:text-2xl pt-1">
+                      {GB_CURRENCY.format(product.price)}
+                    </div>
                   </div>
                 </div>
               </div>

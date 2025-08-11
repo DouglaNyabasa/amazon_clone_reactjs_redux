@@ -4,7 +4,6 @@ import { callAPI } from "../Utils/CallApis";
 
 import { useNavigate, createSearchParams } from "react-router-dom";
 
-
 const Search = () => {
   const [suggestions, setSuggestions] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
@@ -87,7 +86,5 @@ const Search = () => {
     </div>
   );
 };
-
-;
 
 export default Search;
