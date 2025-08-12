@@ -17,10 +17,10 @@ const CarouselCategory = () => {
   const searchCategory = (category) => {
     navigate({
       pathname: "search",
-      search: createSearchParams({
-        category: category,
+      search: `${createSearchParams({
+        category: `${category}`,
         searchTerm: ``,
-      }).toString(),
+      })}`,
     });
   };
     
@@ -33,27 +33,27 @@ const CarouselCategory = () => {
         navigation={true}
         modules={[Navigation]}
         >
-            <SwiperSlide>
+            <SwiperSlide onClick={()=> searchCategory("Deals")} className="cursor-pointer">
             <img src={carousel0}   />
         </SwiperSlide>
 
-        <SwiperSlide>
+        <SwiperSlide onClick={()=> searchCategory("Amazon")} className="cursor-pointer">
             <img src={carousel1}   />
         </SwiperSlide>
 
-           <SwiperSlide>
+           <SwiperSlide onClick={()=> searchCategory("Fashion")} className="cursor-pointer">
             <img src={carousel2}   />
         </SwiperSlide>
 
-           <SwiperSlide>
+           <SwiperSlide onClick={()=> searchCategory("Computers")} className="cursor-pointer">
             <img src={carousel4}   />
         </SwiperSlide>
 
-           <SwiperSlide>
+           <SwiperSlide onClick={()=> searchCategory("Home")} className="cursor-pointer">
             <img src={carousel5}   />
         </SwiperSlide>
 
-           <SwiperSlide>
+           <SwiperSlide onClick={()=> searchCategory("Mobiles")} className="cursor-pointer">
             <img src={carousel6}   />
         </SwiperSlide>
 
