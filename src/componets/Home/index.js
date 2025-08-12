@@ -10,4 +10,5 @@ export { default as Checkout } from "../Checkout/Checkout";
 export { default as ProductDetails } from "../productDetails/ProductDetails";
 export { default as ProductBadge } from "../ProductBadge/ProductBadge";
 export { default as ProductRatings } from "../ProductRatings/ProductRatings";
+export { default as NavBar } from "../Navbar/Navbar";
 
