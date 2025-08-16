@@ -1,16 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {
-  HomePage,
-  NavBar,
-  Checkout,
-  SearchResults,
-  ProductPage,
-} from "./componets/Home/";
+import { HomePage, Checkout, SearchResults, ProductPage } from "./componets/Home/";
+import Navbar from "./componets/Navbar/Navbar";
+
 
 const App = () => {
   return (
     <BrowserRouter>
-      <NavBar />
+      <Navbar />
       <Routes>
         <Route exact path="/" element={<HomePage />} />
         <Route path="/search" element={<SearchResults />} />
@@ -20,5 +16,6 @@ const App = () => {
     </BrowserRouter>
   );
 };
+
 
 export default App;

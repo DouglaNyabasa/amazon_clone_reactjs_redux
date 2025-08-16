@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const Navbar = () => {
-  //  const cartNumber = useSelector((state) => state.cart.productNumber);
+//   const cartNumber = useSelector((state) => state.cart.productsNumber); 
 
   return (
     <header className="min-w-[1000px]">
@@ -40,7 +40,7 @@ const Navbar = () => {
             <div className="flex pr-3 pl-3">
               <ShoppingCartIcon className="h-[48px]" />
               {/* <div className="relative">
-                {cartNumber > 0 && ( // Only show cart number if greater than 0
+                {cartNumber > 0 && (
                   <div className="absolute">
                     {cartNumber}
                   </div>
