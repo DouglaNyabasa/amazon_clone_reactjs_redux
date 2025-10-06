@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams,Link } from "react-router-dom";
 import { callAPI } from "../Utils/CallApis";
 import { ProductDetails } from "../Home";
 import {GB_CURRENCY  } from '../Utils/Constants'
-
+import { addToCart } from "../../redux/cartSlise";
+import { useDispatch } from "react-redux";
 const ProductPage = () => {
   const [product, setProduct] = useState(null);
   const { id } = useParams();
+  const dispatch = useDispatch();
+  const [quantity,setQuantity] = useState("1")
 
   const getProduct = () => {
     callAPI(`data/products.json`).then((productResults) => {
@@ -17,6 +20,11 @@ const ProductPage = () => {
   useEffect(() => {
     getProduct();
   }, []);
+
+  const addQuantityToProduct = () =>{
+    setProduct(product.quantity = quantity);
+    return product;
+  }
 
   if (!product?.title) return <h1 className="">Loading Product...</h1>;
   return (
@@ -44,13 +52,16 @@ const ProductPage = () => {
               <div className="text-base xl:text-lg font-semibold text-green-500 mt-1">In Stock</div>
               <div className="text-base xl:text-lg font-semibold mt-1">
                 Quantity:
-                <select className="p-2 bg-white border rounded-md focus:border-indigo-600">
+                <select onChange={(e)=> setQuantity(e.target.value)} className="p-2 bg-white border rounded-md focus:border-indigo-600">
                   <option>1</option>
                   <option>2</option> 
                   <option>3</option>
                 </select>
               </div>
-              <button className="bg-yellow-400 w-full p-3 text-xs xl:text-sm rounded hover:bg-yellow-500 mt-4">Add to Cart</button>
+              <Link to={"/checkout"}>
+                <button onClick={()=> dispatch(addToCart(addQuantityToProduct))} className="bg-yellow-400 w-full p-3 text-xs xl:text-sm rounded hover:bg-yellow-500 mt-4">Add to Cart</button>
+
+              </Link>
             </div>
           </div>
         </div>
