@@ -6,10 +6,10 @@ import {GB_CURRENCY  } from '../Utils/Constants'
 import { addToCart } from "../../redux/cartSlise";
 import { useDispatch } from "react-redux";
 const ProductPage = () => {
-  const [product, setProduct] = useState(null);
   const { id } = useParams();
+  const [product, setProduct] = useState(null);
+  const [quantity, setQuantity] = useState("1");
   const dispatch = useDispatch();
-  const [quantity,setQuantity] = useState("1")
 
   const getProduct = () => {
     callAPI(`data/products.json`).then((productResults) => {
@@ -17,16 +17,16 @@ const ProductPage = () => {
     });
   };
 
+  const addQuantityToProduct = () => {
+    setProduct((product.quantity = quantity));
+    return product;
+  };
+
   useEffect(() => {
     getProduct();
   }, []);
 
-  const addQuantityToProduct = () =>{
-    setProduct(product.quantity = quantity);
-    return product;
-  }
-
-  if (!product?.title) return <h1 className="">Loading Product...</h1>;
+  if (!product?.title) return <h1>Loading Product ...</h1>;
   return (
     product && (
       <div className="h-screen bg-amazonClone-background">
@@ -59,7 +59,10 @@ const ProductPage = () => {
                 </select>
               </div>
               <Link to={"/checkout"}>
-                <button onClick={()=> dispatch(addToCart(addQuantityToProduct))} className="bg-yellow-400 w-full p-3 text-xs xl:text-sm rounded hover:bg-yellow-500 mt-4">Add to Cart</button>
+                <button 
+                onClick={() => dispatch(addToCart(addQuantityToProduct()))}
+
+                className="bg-yellow-400 w-full p-3 text-xs xl:text-sm rounded hover:bg-yellow-500 mt-4">Add to Cart</button>
 
               </Link>
             </div>

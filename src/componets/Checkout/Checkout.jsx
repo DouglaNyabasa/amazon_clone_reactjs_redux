@@ -8,7 +8,6 @@ import {
   decrementInCart,
   incrementInCart,
 } from "../../redux/cartSlise";
-
 const Checkout = () => {
   const products = useSelector((state) => state.cart.products);
   const itemsNumber = useSelector((state) => state.cart.productsNumber);
@@ -115,4 +114,3 @@ const Checkout = () => {
 };
 
 export default Checkout;
-
