@@ -2,12 +2,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
-import carousel0 from "../../assets/images/category_0.jpg";
-import carousel1 from "../../assets/images/category_1.jpg";
-import carousel2 from "../../assets/images/category_2.jpg";
-import carousel4 from "../../assets/images/category_3.jpg";
-import carousel5 from "../../assets/images/category_4.jpg";
-import carousel6 from "../../assets/images/category_5.jpg";
+import carousel0 from "../../../public/images/category_0.jpg";
+import carousel1 from "../../../public/images/category_1.jpg";
+import carousel2 from "../../../public/images/category_2.jpg";
+import carousel4 from "../../../public/images/category_3.jpg";
+import carousel5 from "../../../public/images/category_4.jpg";
+import carousel6 from "../../../public/images/category_5.jpg";
 import { useNavigate, createSearchParams } from "react-router-dom";
 
 const CarouselCategory = () => {

@@ -3,16 +3,16 @@ import { Navigation } from "swiper";
 import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
-import product0 from "../../assets/images/product_0_small.jpg";
-import product1 from "../../assets/images/product_1_small.jpg";
-import product2 from "../../assets/images/product_2_small.jpg";
-import product3 from "../../assets/images/product_3_small.jpg";
-import product4 from "../../assets/images/product_4_small.jpg";
-import product5 from "../../assets/images/product_5_small.jpg";
-import product6 from "../../assets/images/product_6_small.jpg";
-import product7 from "../../assets/images/product_7_small.jpg";
-import product8 from "../../assets/images/product_8_small.jpg";
-import product9 from "../../assets/images/product_9_small.jpg";
+import product0 from "../../../public/images/product_0_small.jpg";
+import product1 from "../../../public/images/product_1_small.jpg";
+import product2 from "../../../public/images/product_2_small.jpg";
+import product3 from "../../../public/images/product_3_small.jpg";
+import product4 from "../../../public/images/product_4_small.jpg";
+import product5 from "../../../public/images/product_5_small.jpg";
+import product6 from "../../../public/images/product_6_small.jpg";
+import product7 from "../../../public/images/product_7_small.jpg";
+import product8 from "../../../public/images/product_8_small.jpg";
+import product9 from "../../../public/images/product_9_small.jpg";
 
 
 const CarouselProducts = () => {

@@ -4,11 +4,11 @@ import { Navigation, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import carousel1 from "../../assets/images/carousel_1.jpg";
-import carousel2 from "../../assets/images/carousel_2.jpg";
-import carousel4 from "../../assets/images/carousel_4.jpg";
-import carousel5 from "../../assets/images/carousel_5.jpg";
-import carouselVid from "../../assets/images/carousel_vid.mp4";
+import carousel1 from "../../../public/images/carousel_1.jpg";
+import carousel2 from "../../../public/images/carousel_2.jpg";
+import carousel4 from "../../../public/images/carousel_4.jpg";
+import carousel5 from "../../../public/images/carousel_5.jpg";
+import carouselVid from "../../../public/images/carousel_vid.mp4";
 
 const Carousel = () => {
   return (

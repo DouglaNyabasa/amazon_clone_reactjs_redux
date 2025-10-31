@@ -1,5 +1,5 @@
 import React from "react";
-import amazon from "../../assets/images/amazon.png";
+import amazon from "../../../public/images/amazon.png";
 import { ShoppingCartIcon } from "@heroicons/react/24/outline";
 import { Search } from "../Home";
 import { Link } from "react-router-dom";
